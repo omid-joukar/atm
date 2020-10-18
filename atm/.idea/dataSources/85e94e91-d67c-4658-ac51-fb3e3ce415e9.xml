@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="amt@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="amt">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sakila"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="world"/>
+    <table id="9" parent="2" name="accounts"/>
+    <table id="10" parent="2" name="changecardnummber"/>
+    <table id="11" parent="2" name="customeraccount"/>
+    <table id="12" parent="2" name="customers"/>
+    <table id="13" parent="2" name="employees"/>
+    <table id="14" parent="2" name="transactions"/>
+    <table id="15" parent="2" name="usercontact"/>
+    <column id="16" parent="9" name="accountId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="17" parent="9" name="accountName">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="18" parent="9" name="accountNumber">
+      <Position>3</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="19" parent="9" name="accountPassword">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="20" parent="9" name="cardnummber">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="21" parent="9" name="balance">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <key id="22" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>accountId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="23" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="24" parent="10" name="userName">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="25" parent="10" name="userFamily">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="26" parent="10" name="email">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="27" parent="10" name="cardnummber">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="28" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="11" name="customerId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="11" name="accountId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="31" parent="11" name="accountIdInd">
+      <ColNames>accountId</ColNames>
+    </index>
+    <index id="32" parent="11" name="customerIdInd">
+      <ColNames>customerId</ColNames>
+    </index>
+    <key id="33" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>customerId
+accountId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="34" parent="11" name="customeraccount_ibfk_1">
+      <ColNames>customerId</ColNames>
+      <RefSchemaName>amt</RefSchemaName>
+      <RefTableName>customers</RefTableName>
+      <RefColNames>customerId</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="35" parent="11" name="customeraccount_ibfk_2">
+      <ColNames>accountId</ColNames>
+      <RefSchemaName>amt</RefSchemaName>
+      <RefTableName>accounts</RefTableName>
+      <RefColNames>accountId</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="36" parent="12" name="customerId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="12" name="firstName">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="38" parent="12" name="lastName">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="39" parent="12" name="address">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="40" parent="12" name="telefonnumber">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="41" parent="12" name="email">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="42" parent="12" name="jobTitle">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="43" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>customerId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="13" name="employeeId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="45" parent="13" name="firstName">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="46" parent="13" name="lastName">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="47" parent="13" name="employeepassword">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="48" parent="13" name="address">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="49" parent="13" name="telefonnumber">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="50" parent="13" name="email">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="51" parent="13" name="jobTitle">
+      <Position>8</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="52" parent="13" name="reportsTo">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="53" parent="13" name="reportsToInd">
+      <ColNames>reportsTo</ColNames>
+    </index>
+    <key id="54" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>employeeId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="55" parent="13" name="employees_ibfk_1">
+      <ColNames>reportsTo</ColNames>
+      <RefSchemaName>amt</RefSchemaName>
+      <RefTableName>employees</RefTableName>
+      <RefColNames>employeeId</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="56" parent="14" name="transactionId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="57" parent="14" name="date">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="58" parent="14" name="type">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="59" parent="14" name="employeeId">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="60" parent="14" name="customerId">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="61" parent="14" name="accountId">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="62" parent="14" name="accountIdInd">
+      <ColNames>accountId</ColNames>
+    </index>
+    <index id="63" parent="14" name="customerIdInd">
+      <ColNames>customerId</ColNames>
+    </index>
+    <index id="64" parent="14" name="employeeIdInd">
+      <ColNames>employeeId</ColNames>
+    </index>
+    <key id="65" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>transactionId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="66" parent="14" name="transactions_ibfk_1">
+      <ColNames>employeeId</ColNames>
+      <RefSchemaName>amt</RefSchemaName>
+      <RefTableName>employees</RefTableName>
+      <RefColNames>employeeId</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="67" parent="14" name="transactions_ibfk_2">
+      <ColNames>customerId</ColNames>
+      <RefSchemaName>amt</RefSchemaName>
+      <RefTableName>customers</RefTableName>
+      <RefColNames>customerId</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="68" parent="14" name="transactions_ibfk_3">
+      <ColNames>accountId</ColNames>
+      <RefSchemaName>amt</RefSchemaName>
+      <RefTableName>accounts</RefTableName>
+      <RefColNames>accountId</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="69" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="70" parent="15" name="userName">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="71" parent="15" name="userFamily">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="72" parent="15" name="email">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="73" parent="15" name="text">
+      <Position>5</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <key id="74" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,98 @@
+Many to One Relashionship between reportsto and employeeid
+create table employees(
+employeeId int primary key auto_increment not null ,
+firstName varchar(30) ,
+lastName varchar(30) ,
+address varchar(100) ,
+telefonnumber varchar(30) ,
+email varchar(50),
+jobTitle varchar(30) ,
+reportsTo int ,
+index reportsToInd(reportsTo) ,
+foreign key(reportsTo) 
+references employees(employeeId)
+on delete cascade
+on update cascade);
+
+Many to Many relationship between customers and accounts(we need a additionally table for this relationship(customeraccount table) 
+create table customers(
+customerId int primary key auto_increment not null ,
+firstName varchar(30) ,
+lastName varchar(30) ,
+address varchar(100) ,
+telefonnumber varchar(30) ,
+email varchar(50),
+jobTitle varchar(30) 
+);
+
+
+
+create table accounts(
+accountId int primary key auto_increment not null ,
+accountName varchar(30) ,
+accountNumber varchar(16) ,
+accountPassword varchar(30) ,
+cardnummber varchar(30),
+
+balance float);
+
+
+many to one relationship(customerId FK ,accountId FK)
+create table customeraccount(
+customerId int   not null ,
+accountId int   not null ,
+index customerIdInd(customerId) ,
+foreign key(customerId) 
+references customers(customerId)
+on delete cascade
+on update cascade,
+index accountIdInd(accountId) ,
+foreign key(accountId) 
+references accounts(accountId)
+on delete cascade
+on update cascade,
+primary key(customerId,accountId));
+
+
+
+(one to one relationships (employeeid FK,customerid FK,accountid FK) as  same as one to many relationship
+create table transactions(
+transactionId int   not null primary key auto_increment ,
+date  timestamp,
+type varchar(30) ,
+employeeId int,
+customerId int ,
+accountId int ,
+index employeeIdInd(employeeId) ,
+foreign key(employeeId) 
+references employees(employeeId)
+on delete cascade
+on update cascade,
+index customerIdInd(customerId) ,
+foreign key(customerId) 
+references customers(customerId)
+on delete cascade
+on update cascade,
+index accountIdInd(accountId) ,
+foreign key(accountId) 
+references accounts(accountId)
+on delete cascade
+on update cascade);
+
+
+create table usercontact
+(id int not null primary key auto_increment , 
+userName varchar(30) , 
+userFamily varchar(30) , 
+email varchar(50) , 
+text varchar(500));
+
+
+
+create table changecardnummber(
+Id int primary key auto_increment not null ,
+userName varchar(30) ,
+userFamily varchar(30) ,
+email varchar(50) ,
+cardnummber varchar(30)
+);
