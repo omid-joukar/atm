@@ -113,4 +113,22 @@ public class AccountsDao {
             }
         }
     }
+
+    public void updateAccount(Integer accountId, String accountName, String accountNumber, String accountPassword, String cardnummber) {
+        try(Session session = HiberConf.getSession()) {
+            Accounts accounts = session.get(Accounts.class,accountId);
+            accounts.setAccountName(accountName);
+            accounts.setAccountNumber(accountNumber);
+            accounts.setAccountPassword(accountPassword);
+            accounts.setCardnummber(cardnummber);
+            Transaction tx = session.getTransaction();
+            try {
+                tx.begin();
+                session.merge(accounts);
+                tx.commit();
+            }catch (Exception e){
+                tx.rollback();
+            }
+        }
+    }
 }

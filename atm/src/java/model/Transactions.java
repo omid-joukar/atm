@@ -18,6 +18,9 @@ public class Transactions {
     private Employees employees;
     private Customers customers;
     private Accounts accounts;
+    private String targetAccountNumber;
+    private Float balance;
+    private String status;
 
     @Id
     @Column(name="transactionId")
@@ -69,5 +72,29 @@ public class Transactions {
 
     public void setAccounts(Accounts accounts) {
         this.accounts = accounts;
+    }
+    @Column(name = "targetAccountNumber")
+    public String getTargetAccountNumber() {
+        return targetAccountNumber;
+    }
+
+    public void setTargetAccountNumber(String targetAccountNumber) {
+        this.targetAccountNumber = targetAccountNumber;
+    }
+    @Column(name = "balance")
+    public Float getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Float balance) {
+        this.balance = balance;
+    }
+    @Column(name = "status")
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

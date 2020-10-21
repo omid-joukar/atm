@@ -232,21 +232,33 @@ accountId</ColNames>
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="62" parent="14" name="accountIdInd">
+    <column id="62" parent="14" name="targetAccountNumber">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="63" parent="14" name="balance">
+      <Position>8</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="64" parent="14" name="status">
+      <Position>9</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <index id="65" parent="14" name="accountIdInd">
       <ColNames>accountId</ColNames>
     </index>
-    <index id="63" parent="14" name="customerIdInd">
+    <index id="66" parent="14" name="customerIdInd">
       <ColNames>customerId</ColNames>
     </index>
-    <index id="64" parent="14" name="employeeIdInd">
+    <index id="67" parent="14" name="employeeIdInd">
       <ColNames>employeeId</ColNames>
     </index>
-    <key id="65" parent="14" name="PRIMARY">
+    <key id="68" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>transactionId</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="66" parent="14" name="transactions_ibfk_1">
+    <foreign-key id="69" parent="14" name="transactions_ibfk_1">
       <ColNames>employeeId</ColNames>
       <RefSchemaName>amt</RefSchemaName>
       <RefTableName>employees</RefTableName>
@@ -254,7 +266,7 @@ accountId</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="67" parent="14" name="transactions_ibfk_2">
+    <foreign-key id="70" parent="14" name="transactions_ibfk_2">
       <ColNames>customerId</ColNames>
       <RefSchemaName>amt</RefSchemaName>
       <RefTableName>customers</RefTableName>
@@ -262,7 +274,7 @@ accountId</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="68" parent="14" name="transactions_ibfk_3">
+    <foreign-key id="71" parent="14" name="transactions_ibfk_3">
       <ColNames>accountId</ColNames>
       <RefSchemaName>amt</RefSchemaName>
       <RefTableName>accounts</RefTableName>
@@ -270,29 +282,29 @@ accountId</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="69" parent="15" name="id">
+    <column id="72" parent="15" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="70" parent="15" name="userName">
+    <column id="73" parent="15" name="userName">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
-    <column id="71" parent="15" name="userFamily">
+    <column id="74" parent="15" name="userFamily">
       <Position>3</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
-    <column id="72" parent="15" name="email">
+    <column id="75" parent="15" name="email">
       <Position>4</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="73" parent="15" name="text">
+    <column id="76" parent="15" name="text">
       <Position>5</Position>
       <DataType>varchar(500)|0</DataType>
     </column>
-    <key id="74" parent="15" name="PRIMARY">
+    <key id="77" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

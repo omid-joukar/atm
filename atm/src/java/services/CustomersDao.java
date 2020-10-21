@@ -40,4 +40,24 @@ public class CustomersDao {
         }
         return customerId;
     }
+
+    public void updateCustomer(Integer customerId, String firstName, String lastName, String address, String telefonnumber, String email, String jobTitle) {
+    try(Session session = HiberConf.getSession()){
+        Customers customers = session.get(Customers.class,customerId);
+        customers.setFirstName(firstName);
+        customers.setLastName(lastName);
+        customers.setAddress(address);
+        customers.setTelefonnumber(telefonnumber);
+        customers.setEmail(email);
+        customers.setJobTitle(jobTitle);
+        Transaction tx = session.getTransaction();
+        try{
+            tx.begin();
+            session.merge(customers);
+            tx.commit();
+        }catch (Exception e){
+            tx.rollback();
+        }
+    }
+    }
 }

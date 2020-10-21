@@ -1,5 +1,7 @@
 <%@ page import="services.AccountsDao" %>
-<%@ page import="model.Accounts" %><%--
+<%@ page import="model.Accounts" %>
+<%@ page import="model.Customers" %>
+<%@ page import="services.TransactionsDao" %><%--
   Created by IntelliJ IDEA.
   User: omid
   Date: 10/7/2020
@@ -13,7 +15,7 @@
 </head>
 <body>
 <%
-    AccountsDao accountsDao = new AccountsDao();
+    TransactionsDao transactionsDao = new TransactionsDao();
     Accounts targetAccount = (Accounts) session.getAttribute("targetAccount");
     Accounts accounts = (Accounts) session.getAttribute("accounts");
     Float balance = (Float) session.getAttribute("balance");
@@ -21,7 +23,7 @@
         response.sendError(HttpServletResponse.SC_BAD_REQUEST);
         return;
     }
-    accountsDao.transferMony(accounts.getAccountId(),targetAccount.getAccountId(),balance);
+    transactionsDao.insertTransaction(accounts,targetAccount.getAccountNumber(),balance);
     response.sendRedirect(request.getServletContext().getContextPath()+"/customerAbil.html");
 %>
 </body>
