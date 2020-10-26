@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>User Login Html</title>
+    <link rel="stylesheet" type="text/css" href="resources/login_style_sheet.css">
 </head>
 <body>
 <form action="/user_login" method="post">
-<h1>Online Banking</h1>
-<h7> Customer Login</h7>
-<input type="text" placeholder="enter accountNumber" width="50" name="accountNumber">
-<input type="Password" placeholder="enter password" width="50" name="accountPassword">
-<input type="submit" value="login">
+
+<div class="boxbase">
+<div class="boxleft">
+    <img class="pic1" src="WEB-PICTURES/attachment_120977314.png" width="700px" height="700px">
+    <p class="headertext">Online Banking</p>
+</div>
+<div class="boxright">
+<div class="loginbox">
+<img class="userIcon" src="WEB-PICTURES/userIconasl.png">  
+<input class="accountnumber" type="text" placeholder="account number"  name="accountNumber">
+<br/>
+<input class="password" type="Password" placeholder="password"  name="accountPassword">
+<br/>
+<input class="loginicon"   type="submit" value="login">
+    </div>
+</div>
+</div>
 </form>
 </body>
 </html>

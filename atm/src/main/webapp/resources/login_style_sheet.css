@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.boxbase
+{
+    width: 1200px;
+    height: 700px;
+    margin: auto;
+}
+.boxleft
+{
+    width: 700px;
+    height: 700px;
+    float: left;
+    position: relative;
+}
+
+.pic1{
+    position:absolute;
+}
+.headertext{
+    position: absolute;
+    top: 5px;
+    left: 350px;
+    transition: all 2s;
+    font-family:cursive;
+    font-size: 45px;
+    color: #FFF;
+}
+.boxbase:hover .headertext{
+    transform: translateY(300px);
+    text-shadow: 0px 0px 10px #FFF;
+}
+
+
+.boxright
+{
+    width: 500px;
+    height: 700px;
+    float: left;
+    background-color: #ECF0F1;
+    
+    
+}
+.loginicon{
+    width: 200px;
+    background-color: black;
+    color: #FFF;
+    font-family: cursive;
+    font-size: 20px;
+    margin-left: 12px;
+    margin-top: 20px;
+    padding: 8px;
+    height: 50px;
+    transition: all 1s;
+    border-radius: 10px;
+    border-bottom-color: #2BB673;
+    border-left-color: #2BB673;
+    border-top-color: #2BB673;
+    border-right-color: #2BB673;
+
+    
+}
+.loginicon:hover{
+    background-color: #2BB673;
+    color: #EE4136;
+    
+}
+.loginbox{
+    margin-left: 160px;
+}
+.userIcon{
+    width: 170px;
+    height: 170px;
+    margin-top: 20px;
+    margin-left: 30px;
+    transition: all 1s; 
+    border-radius: 200px;
+}
+.boxright:hover .userIcon{
+    width: 190px;
+    height: 190px;
+    margin-left: 15px;       
+}
+.boxright:hover .accountnumber{
+     width: 210px;
+     height: 25px;
+     margin-left: -9px;
+ }
+.boxright:hover .employeeId{
+    width: 210px;
+    height: 25px;
+    margin-left: -9px;
+}
+.boxright:hover .password{
+    
+     width: 210px;
+    height: 25px;
+    margin-left: -9px;     
+}
+.boxright:hover .loginicon{
+    margin-left: 3px;
+    height: 55px;
+    margin-left: 10px;       
+}
+.accountnumber{
+    margin-top: 20px;
+    width: 200px;
+    height: 12px;
+    padding: 10px;
+    transition: all 1s;
+    
+}
+.employeeId{
+    margin-top: 20px;
+    width: 200px;
+    height: 12px;
+    padding: 10px;
+    transition: all 1s;
+
+}
+
+
+.password{
+    margin-top: 20px;
+    width: 200px;
+    height: 12px;
+    padding: 10px;
+    transition: all 1s
+}

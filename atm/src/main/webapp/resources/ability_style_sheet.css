@@ -1,0 +1,364 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.boxbase a{
+    text-decoration: none;
+    color: #000; 
+}
+.menu1:hover .transfer{
+    display: block;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    
+}
+
+.menu2:hover .password{
+    display: block;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    
+}
+.menu3:hover .changecard{
+    display: block;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    
+}
+.menu4:hover .contact{
+    display: block;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    
+}
+.menu5:hover .create{
+    display: block;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    
+}
+.menu6:hover .search{
+    display: block;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    
+}
+.menu7:hover .confirm{
+    display: block;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    
+}
+.create{
+    margin-top: -50px;
+    margin-left: 650px;
+    position: absolute;
+    right: 130px;
+    width: 200px;
+    height: 200px;
+    transition: all 2s; 
+    display: none;
+    
+}
+.search{
+    margin-top: -165px;
+    margin-left: 650px;
+    position: absolute;
+    right: 130px;
+    width: 200px;
+    height: 200px;
+    display: none;
+    transition: all 2s; 
+    
+    
+}
+.confirm{
+    margin-top: -290px;
+    margin-left: 650px;
+    position: absolute;
+    right: 130px;
+    width: 200px;
+    height: 200px;
+    transition: all 2s; 
+    display: none;
+}
+
+.changecard{
+    margin-top: -300px;
+    margin-left: 650px;
+    position: absolute;
+    right: 130px;
+    width: 200px;
+    height: 200px;
+    transition: all 2s;
+   display: none;
+}
+.transfer{
+    margin-top: -60px;
+    margin-left: 650px;
+    position: absolute;
+    right: 130px;
+    width: 200px;
+    height: 200px;
+    transition: all 2s;
+    display: none;
+    
+    
+}
+.password{
+    margin-top: -180px;
+    margin-left: 650px;
+    position: absolute;
+    right: 130px;
+    width: 200px;
+    height: 200px;
+    transition: all 2s;
+    display: none;
+    
+}
+.contact{
+    margin-top: -420px;
+    margin-left: 650px;
+    position: absolute;
+    right: 130px;
+    width: 200px;
+    height: 200px;
+    transition: all 2s; 
+    display: none;
+    
+}
+
+
+
+
+.boxbase a .menu1{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0px 0px 2px;
+}
+.boxbase a .menu2{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0px 0px 2px;
+}
+.boxbase a .menu3{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0px 0px 2px;
+}
+.boxbase a .menu4
+{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0px 0px 2px;
+}
+.boxbase a .menu5
+{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0px 0px 2px;
+}
+.boxbase a .menu6
+{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0px 0px 2px;
+}
+.boxbase a .menu7
+{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0px 0px 2px;
+}
+
+
+
+.boxbase{
+    width: 1200px;
+    height: 700px;
+    background-color:  #ECF0F1;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+   
+}
+
+
+
+
+
+.boxbase:hover .menu1{
+    width: 500px;   
+    box-shadow: 0px 0px 10px #000;
+    transition: all 1s;
+}
+.boxbase:hover .menu2{
+    width: 500px;   
+    box-shadow: 0px 0px 10px #000;
+    transition: all 1s;
+}
+.boxbase:hover .menu3{
+    width: 500px;   
+    box-shadow: 0px 0px 10px #000;
+    transition: all 1s;
+}
+.boxbase:hover .menu4{
+    width: 500px;   
+    box-shadow: 0px 0px 10px #000;
+    transition: all 1s;
+}
+.boxbase:hover .menu5{
+    width: 500px;   
+    box-shadow: 0px 0px 10px #000;
+    transition: all 1s;
+}
+.boxbase:hover .menu6{
+    width: 500px;   
+    box-shadow: 0px 0px 10px #000;
+    transition: all 1s;
+}
+.boxbase:hover .menu7{
+    width: 500px;   
+    box-shadow: 0px 0px 10px #000;
+    transition: all 1s;
+}
+
+
+
+
+
+
+.menu1:hover{
+    background-color: #000;
+    color: #EE4136;    
+}
+.menu2:hover{
+    background-color: #000;
+    color: #EE4136;   
+}
+.menu3:hover{
+    background-color: #000;
+    color: #EE4136;    
+}
+.menu4:hover{
+    background-color: #000;
+    color: #EE4136;  
+}
+.menu5:hover{
+    background-color: #000;
+    color: #EE4136;  
+}
+.menu6:hover{
+    background-color: #000;
+    color: #EE4136;  
+}
+.menu7:hover{
+    background-color: #000;
+    color: #EE4136;  
+}
+
+
+
+
+
+
+.menu1
+{
+    width: 300px;
+    height: 100px;
+    background-color: #EE4136;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    line-height: 100px;
+    transition: all 1s;   
+}
+.menu2
+{
+     width: 300px;
+     height: 100px;
+     background-color: #EE4136;
+     margin-top: 20px;
+     margin-left: 20px;
+    border-radius: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    line-height: 100px;
+    transition: all 1s; 
+}
+.menu3
+{
+     width: 300px;
+     height: 100px;
+     background-color: #EE4136;
+     margin-top: 20px;
+     margin-left: 20px;
+    border-radius: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    line-height: 100px;
+    transition: all 1s;
+}
+.menu4
+{
+     width: 300px;
+     height: 100px;
+     background-color: #EE4136;
+     margin-top: 20px;
+     margin-left: 20px;
+    border-radius: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    line-height: 100px;
+    transition: all 1s;
+}
+.menu5
+{
+     width: 350px;
+     height: 100px;
+     background-color: #EE4136;
+     margin-top: 20px;
+     margin-left: 20px;
+    border-radius: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    line-height: 100px;
+    transition: all 1s;
+}
+.menu6
+{
+     width: 350px;
+     height: 100px;
+     background-color: #EE4136;
+     margin-top: 20px;
+     margin-left: 20px;
+    border-radius: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    line-height: 100px;
+    transition: all 1s;
+}
+.menu7
+{
+     width: 350px;
+     height: 100px;
+     background-color: #EE4136;
+     margin-top: 20px;
+     margin-left: 20px;
+    border-radius: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    line-height: 100px;
+    transition: all 1s;
+}

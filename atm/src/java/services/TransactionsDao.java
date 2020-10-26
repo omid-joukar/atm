@@ -23,6 +23,7 @@ public class TransactionsDao {
     }
     public void insertTransaction(Accounts accounts, String targetAccountNumber, float balance){
         Transactions transactions = new Transactions();
+
         transactions.setAccounts(accounts);
         transactions.setTargetAccountNumber(targetAccountNumber);
         transactions.setBalance(balance);
@@ -32,6 +33,8 @@ public class TransactionsDao {
         transactions.setStatus("In Order");
         try(Session session = HiberConf.getSession()){
             Transaction tx = session.getTransaction();
+            Employees employees = session.get(Employees.class , 1);
+            transactions.setEmployees(employees);
             try {
                 tx.begin();
                 session.save(transactions);
