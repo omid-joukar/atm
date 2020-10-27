@@ -9,9 +9,15 @@
 <html>
 <head>
     <title>Menual Transfer</title>
+    <link rel="stylesheet" type="text/css" href="resources/table_input_style_sheet.css">
 </head>
 <body>
     <form method="post" action="/transfer_mony">
+        <div class="boxbase">
+           
+           
+           
+       <div class="boxleft">
         <%Accounts accounts = (Accounts) session.getAttribute("accounts");%>
         <table>
             <tr>
@@ -25,31 +31,23 @@
                 <td><%=accounts.getAccountNumber()%></td>
             </tr>
         </table>
+        </div>
         <form method="post">
-            <table>
-                <tr>
-                    <td>
-                        <label for="targetAccount">Target Account :</label>
-                    </td>
-                    <td>
-                        <input type="text" name="targetAccount" id="targetAccount">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="balance">Balance :</label>
-                    </td>
-                    <td>
-                        <input type="text" name="balance" id="balance">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" value="transfer">
-                    </td>
-                </tr>
-            </table>
+            
+          
+           <div class="boxright">
+               <img class="transferpic" src="WEB-PICTURES/tasl.png">
+                   
+               <input class="target" type="text" width="200px" height="12px" name="targetAccount" id="targetAccount" placeholder="target account number"><br/>
+                
+                    
+                        <input class="balance" width="200px" height="12px" type="text" name="balance" id="balance" placeholder="balance"><br/>
+               
+                
+                        <input class="transfer" type="submit" value="transfer">
+                </div> 
         </form>
+        </div>
     </form>
 </body>
 </html>
