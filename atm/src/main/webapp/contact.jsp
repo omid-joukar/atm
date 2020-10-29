@@ -9,25 +9,26 @@
 <html>
 <head>
     <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="resources/form_style_sheet.css">
 </head>
-<body style="background-color: MistyRose;">
-<legend><b>CONTACT</b></legend><br /><br /><br />
+<body>
+<div class="boxbase">
+<legend>Contact</legend><br />
 <form action="/user_contact" method="post" >
-    <label for="userName"> Name:</label></br>
-    <input type="text" name="userName" id="userName" required/> <br /><br />
-    <label for="userFamily"> Family:</label></br>
-    <input type="text" name="userFamily" id="userFamily" required/> <br /><br />
-    <label for="email"> Email:</label></br>
-    <input type="text" name="email" id="email" required/> <br /><br /><br />
+   <input type="text" name="userName" id="userName" placeholder="user name" required/> <br/>
+    
+    <input type="text" name="userFamily" id="userFamily" placeholder="family" required><br />
+    
+    <input type="text" name="email" id="email"
+    placeholder="email" required><br />
 
-    <label for="textArea"> Text:</label></br>
-    <textarea name="textArea" id="textArea" rows="10" cols="100" >
+    
+    <textarea name="textArea" id="textArea" placeholder="please neter your message here!" >
 
-		</textarea><br /><br /><br /><br />
+		</textarea><br/>
 
-    <input type="submit" value="send" /> <br /><br />
-    <input type="reset" value="reset" /> <br />
+    <input class="button" type="submit" value="send" > <br/>
 </form>
-
+    </div>
 </body>
 </html>

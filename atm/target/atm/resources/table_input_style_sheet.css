@@ -11,6 +11,21 @@
     margin-left: -60px;
     
 }
+.boxright:hover .rotatepic{
+    
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    
+}
+.rotatepic{
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    transition: all 2s;
+}
 
 .transferpic{
     width: 500px;
@@ -19,6 +34,7 @@
     margin-top: 20px;
     transition: all 1s;
 }
+
 
 .boxright:hover .target{
     width: 270px;

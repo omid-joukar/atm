@@ -9,10 +9,16 @@
 <html>
 <head>
     <title>Change Password</title>
+     <link rel="stylesheet" type="text/css" href="resources/table_input_style_sheet.css">
 </head>
 <body>
 <
 <form action="/customer_change_password" method="post">
+<div class="boxbase">
+           
+           
+           
+       <div class="boxleft">
 
 <%
     Accounts accounts = (Accounts) session.getAttribute("accounts");
@@ -32,31 +38,21 @@
         <td><%=accounts.getAccountNumber()%></td>
     </tr>
 </table>
+</div>
 <form method="post">
-<table>
-<tr>
-    <td>
-        <label for="accountPssword">Account Password :</label>
-    </td>
-    <td>
-        <input type="text" name="accountPassword" id="accountPssword"/>
-    </td>
-</tr>
-<tr>
-    <td>
-        <label for="accountNewPassword">Account new Password :</label>
-    </td>
-    <td>
-        <input type="text" name="accountNewPassword" id="accountNewPassword" />
-    </td>
-</tr>
-<tr>
-    <td>
-        <input type="submit" value="change password"/>
-    </td>
-</tr>
-</table>
-</form>
+
+          <div class="boxright">
+              
+              <img class="rotatepic"  src="WEB-PICTURES/changepasswordasl.png">
+              
+               
+        <input class="target" type="text" name="accountPassword" id="accountPssword" placeholder="account password"/><br/>
+        <input class="balance" type="text" name="accountNewPassword" id="accountNewPassword"placeholder="new account password" /><br/>
+        <input class="transfer" type="submit" value="change password"/>
+        <br/>
+        </div> 
+    </form>
+    </div> 
 </form>
 </body>
 </html>

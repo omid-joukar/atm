@@ -9,33 +9,34 @@
 <html>
   <head>
       <title>Changebankcard</title>
+      <link rel="stylesheet" type="text/css" href="resources/form_style_sheet.css">
   </head>
 
-<body style="background-color: tan;">
-      <legend><b>changebankcard</b></legend><br /><br /><br />
+<body>
+<div class="boxbase">
+
+      <legend>Change Bank Card</legend><br />
       <form action="/customer_change_card" method="post" >
 
 
 
-          <label for="userName"> Name:</label></br>
-          <input type="text" name="userName" id="userName" required/> <br /><br />
 
-          <label for="userFamily"> Family:</label></br>
-          <input type="text" name="userFamily" id="userFamily" required/> <br /><br />
+          <input type="text" name="userName" id="userName" required placeholder="user name"/> <br />
 
-          <label for="email"> Email:</label></br>
-          <input type="text" name="email" id="email" required/> <br /><br /><br />
+          
+          <input type="text" name="userFamily" id="userFamily" required placeholder="family"/> <br />
+          
+          <input type="text" name="email" id="email" required placeholder="email"/> <br />
 
-          <label for="cardnummber"> cardnummber:</label></br>
-          <input type="text" name="cardnummber" id="cardnummber" required/> <br /><br /><br />
+          <input type="text" name="cardnummber" id="cardnummber" required placeholder="card number"/> <br />
 
          
 
-          <input type="submit" value="send" /> <br /><br />
-          <input type="reset" value="reset" /> <br />
+          <input type="submit" value="send" class="button" /> <br />
+         
 
 
       </form>
-
+</div>
 </body>
 </html>
