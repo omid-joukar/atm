@@ -15,6 +15,15 @@
     float: left;
     position: relative;
 }
+.boxleft2
+{
+    width: 700px;
+    height: 700px;
+    float: left;
+    position: relative;
+    background-color: #eee;
+    padding: 30px;
+}
 
 .pic1{
     position:absolute;
@@ -128,4 +137,16 @@
     height: 12px;
     padding: 10px;
     transition: all 1s
+}
+.inputt{
+     margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    transition: all 1s;
+}
+.searchImage{
+    width: 430px;
+    height: 400px;
+    float: left;
 }

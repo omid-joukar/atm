@@ -1,0 +1,67 @@
+.button{
+      width: 200px;
+    background-color: black;
+    color: #FFF;
+    font-family: cursive;
+    font-size: 20px;
+    margin-left: 85px;
+    margin-top: 20px;
+    padding: 8px;
+    height: 50px;
+    transition: all 1s;
+    border-radius: 10px;
+    border-bottom-color: #2BB673;
+    border-left-color: #2BB673;
+    border-top-color: #2BB673;
+    border-right-color: #2BB673;
+    float: left;
+}
+.button:hover{
+    background-color: #2BB673;
+    color: #EE4136;
+}
+.inputt1{
+    width: 300px;
+    height: 30px;
+    margin-top: 280px;
+    margin-left: 30px;
+    transition: all 1s;
+}
+.inputt2{
+    width: 300px;
+    height: 30px;
+    margin-top: 25px;
+    margin-left: 30px;
+    transition: all 1s;
+}
+img{
+    position: absolute;
+    width: 250px;
+    height: 220px;
+    margin-left: 270px;
+    border-radius: 10px;
+    margin-top: -300px;
+    transition: all 1s;
+    
+}
+.boxbase{
+    width: 1200px;
+    height: 700px;
+    background-color: #eee;
+    margin: auto;
+    position: relative;
+    
+}
+.boxbase:hover img{
+    width: 500px;
+    height: 470px;
+    box-shadow: 0px 0px 10px #3D84A8;
+    
+    display:inline;
+}
+.boxbase:hover .inputt1{
+    height: 40px;
+}
+.boxbase:hover .inputt2{
+    height: 40px;
+}

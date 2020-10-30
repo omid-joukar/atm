@@ -9,29 +9,29 @@
 <html>
   <head>
       <title>Search Account</title>
+      <link rel="stylesheet" type="text/css" href="resources/search_style_sheet.css">
   </head>
 
-<body style="background-color: tan;">
-      <legend><b>search</b></legend><br /><br /><br />
+<body>
+      <div class="boxbase">
+     
       <form action="/search_account" method="post" >
+          
+          <input class="inputt1" type="text" name="accountNumber" id="accountNumber" required placeholder="account number"/> <br />
 
-
-
-          <label for="accountNumber"> Account Number: </label></br>
-          <input type="text" name="accountNumber" id="accountNumber" required/> <br /><br />
-
-          <label for="cardNummber">Card Nummber:</label></br>
-          <input type="text" name="cardNummber" id="cardNummber" required/> <br /><br />
-
-           <br /><br /><br />
+          <input class="inputt2" type="text" name="cardNummber" id="cardNummber" placeholder="card number" required/><br/>
 
          
 
-          <input type="submit" value="send" /> <br /><br />
-          <input type="reset" value="reset" /> <br />
+          <input class="button" type="submit" value="search" /> <br /><br />
+         
+          
+          <img src="WEB-PICTURES/search.gif">
+          
+        
 
 
       </form>
-
+</div>
 </body>
 </html>

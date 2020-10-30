@@ -12,6 +12,7 @@
 <html>
 <head>
     <title>Confirm Transactions</title>
+    <link rel="stylesheet" type="text/css" href="resources/table_input_style_sheet.css">
 </head>
 <body>
 
@@ -22,17 +23,17 @@
     %>
     <table>
         <tr>
-            <td>Transaction Id</td>
-            <td>Date</td>
-            <td>Type</td>
-            <td>Employee Name</td>
-            <td>Customer Id</td>
-            <td>Account Id</td>
-            <td>Target Account Number</td>
-            <td>Balance</td>
-            <td>Status</td>
-            <td>Confirm</td>
-            <td>Reject</td>
+            <th>Transaction Id</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Employee Name</th>
+            <th>Customer Id</th>
+            <th>Account Id</th>
+            <th>Target Account Number</th>
+            <th>Balance</th>
+            <th>Status</th>
+            <th>Confirm</th>
+            <th>Reject</th>
         </tr>
         <tr>
             <%for (Transactions transactions : transactionsList){%>
@@ -40,9 +41,11 @@
             <td><%=transactions.getDate()%></td>
             <td><%=transactions.getType()%></td>
             <td><%=transactions.getEmployees().getFirstName()+ " "+transactions.getEmployees().getLastName()%></td>
+    
             <td><%=transactions.getCustomers().getCustomerId()%></td>
             <td><%=transactions.getCustomers().getAccountsList().get(0).getAccountId()%></td>
             <td><%=transactions.getTargetAccountNumber()%></td>
+            <td><%=transactions.getBalance()%></td>
             <td><%=transactions.getStatus()%></td>
             <td><a href="<%=request.getServletContext().getContextPath()%>/transaction_order?action=confirm&employeeId=<%=employees.getEmployeeId()%>&transactionId=<%=transactions.getTransactionId()%>&accountId=<%=transactions.getAccounts().getAccountId()%>&targetAccountNumber=<%=transactions.getTargetAccountNumber()%>&balance=<%=transactions.getBalance()%>">Confirm</a></td>
             <td><a href="<%=request.getServletContext().getContextPath()%>/transaction_order?action=reject&employeeId=<%=employees.getEmployeeId()%>&transactionId=<%=transactions.getTransactionId()%>&accountId=<%=transactions.getAccounts().getAccountId()%>&targetAccountNumber=<%=transactions.getTargetAccountNumber()%>&balance=<%=transactions.getBalance()%>">Reject</a></td>

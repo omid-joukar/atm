@@ -7,7 +7,7 @@ input[type=text], textarea{
     border: 1px solid black;
     margin: 10px;
     width: 400px;
-    height:20px;
+    height:30px;
     transition: all 1s;
     padding: 4px;
 }
@@ -33,7 +33,7 @@ input[type=text], textarea{
     text-shadow: 1px 1px 1px;
 }
 .boxbase:hover input[type=text]{
-    height: 30px;
+    height: 40px;
 }
 .boxbase:hover textarea{
     height: 130px;
@@ -59,4 +59,31 @@ input[type=text], textarea{
     background-color: #2BB673;
     color: #EE4136;
     
+}
+.boxbase2
+{
+    width: 1200px;
+    height: 800px;
+    margin: auto;
+    background-color: #eee;
+    font-family: cursive;
+    font-size: 20px;
+    color: #EE4136;
+    font-weight: 800;
+    text-shadow: 0px 0px 1px;
+    padding: 20px;
+}
+.boxbase2 legend{
+    margin-left: 10px;
+    transition: all 1s;
+}
+.boxbase2:hover legend{
+    color: #2BB673;
+    text-shadow: 1px 1px 1px;
+}
+.boxbase2:hover input[type=text]{
+    height: 30px;
+}
+.boxbase2:hover textarea{
+    height: 130px;
 }
