@@ -139,6 +139,16 @@ table{
   text-align: center;
     margin: auto;
 }
+.table2{
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 15px;
+  font-family: cursive;
+  width: 90%;
+  text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
 th{
     background-color: #EE4136;
     padding: 15px;
@@ -179,4 +189,13 @@ a:hover{
     text-shadow: 0px 0px 2px #900000;
     font-weight: 900;
     font-size: 20px;
+}
+.tp{
+    padding: 30px;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: 400;
+    
 }

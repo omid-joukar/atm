@@ -13,6 +13,7 @@
 <html>
 <head>
     <title>Confirm Transfer Details</title>
+    <link rel="stylesheet" type="text/css" href="resources/table_input_style_sheet.css">
 </head>
 <body>
 <form method="post" action="transfercomplete.jsp">
@@ -28,6 +29,7 @@
         return;
     }
 %>
+<div class="boxbase1">
 <table>
     <tr>
         <th>Account Id</th>
@@ -40,7 +42,7 @@
         <td><%=accounts.getAccountNumber()%></td>
     </tr>
 </table>
-<table>
+<table class="table2">
     <tr>
         <th>Target Account Type</th>
         <th>Target Account Number</th>
@@ -55,8 +57,9 @@
 
     </tr>
 </table>
-<p>do you confirm to trannsfer <%=balance%> from your account to <%=customersList.get(0).getFirstName() + " "+ customersList.get(0).getLastName()%></p>
-<input type="submit" value="Confirm">
+<p class="tp">do you confirm to trannsfer <%=balance%> from your account to <%=customersList.get(0).getFirstName() + " "+ customersList.get(0).getLastName()%></p>
+<input class="transfer" type="submit" value="Confirm">
+</div>
 </form>
 </body>
 </html>
